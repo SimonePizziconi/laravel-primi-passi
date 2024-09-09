@@ -14,9 +14,33 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    // Hello World
 
-    $title = 'Hello World';
+    // Titolo 
+    $title = 'Film';
 
-    return view('home', compact('title'));
+    // array di film
+    $movies = [
+        "Il Padrino",
+        "Inception",
+        "Titanic",
+        "Il Cavaliere Oscuro",
+        "Pulp Fiction",
+        "La Vita è Bella",
+        "Forrest Gump",
+        "Interstellar",
+        "Shutter Island",
+        "Fight Club",
+        "Il Signore degli Anelli: Il Ritorno del Re",
+        "Matrix",
+        "Gladiatore",
+        "The Prestige",
+        "Star Wars: Una Nuova Speranza",
+        "Avatar",
+        "Jurassic Park",
+        "C'era una volta in America",
+        "Schindler's List",
+        "La La Land"
+    ];
+
+    return view('home', compact('title', 'movies'));
 });
