@@ -43,4 +43,37 @@ Route::get('/', function () {
     ];
 
     return view('home', compact('title', 'movies'));
-});
+})->name('home');
+
+Route::get('/serie-tv', function () {
+
+    // Titolo 
+    $title = 'Serie tv';
+
+    // array di film
+    $tv_series = [
+        "Breaking Bad",
+        "Game of Thrones",
+        "Stranger Things",
+        "The Office",
+        "Friends",
+        "The Mandalorian",
+        "Dark",
+        "Sherlock",
+        "The Crown",
+        "The Witcher",
+        "Black Mirror",
+        "La Casa de Papel",
+        "Narcos",
+        "Westworld",
+        "Peaky Blinders",
+        "The Boys",
+        "Better Call Saul",
+        "The Walking Dead",
+        "The Big Bang Theory",
+        "Fargo"
+    ];
+
+
+    return view('tv-series', compact('title', 'tv_series'));
+})->name('tv-series');

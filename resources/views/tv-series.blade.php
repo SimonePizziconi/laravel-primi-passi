@@ -9,25 +9,22 @@
 
 <body>
 
-    <header>
-        <ul>
-            <li>
-                <a href="{{ route('home') }}"> Film </a>
-            </li>
-            <li>
-                <a href="{{ route('tv-series') }}"> Serie Tv </a>
-            </li>
-        </ul>
-    </header>
+    <ul>
+        <li>
+            <a href="{{ route('home') }}"> Film </a>
+        </li>
+        <li>
+            <a href="{{ route('tv-series') }}"> Serie Tv </a>
+        </li>
+    </ul>
 
-
-    @if (count($movies) > 0)
+    @if (count($tv_series) > 0)
     <h1>
         {{ $title }}
     </h1>
     <ul>
-        @foreach ($movies as $movie)
-        <li>{{ $movie }}</li>
+        @foreach ($tv_series as $tv_serie)
+        <li>{{ $tv_serie }}</li>
         @endforeach
     </ul>
 
